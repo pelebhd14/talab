@@ -5,13 +5,22 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #FBE6C9;
+  overflow-x: hidden;
+}
+
 .phone-screen {
   width: 100%;
-  max-width: 400px; 
+  /* max-width: 400px;  */
   min-height: 100vh;
-  margin: 0 auto; 
+  /* margin: 0 auto;  */
   background-color: #FBE6C9;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -51,7 +60,7 @@
     left: 50%;
     top: 37%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 373.2%;
+    font-size: 3.5rem;
     width: 100%;
     text-align: center;
 
@@ -65,7 +74,7 @@
     left: 50%;
     top: 35%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 170%;
+    font-size: 1.5rem;
     width: 100%;
     text-align: center;
 }
@@ -85,7 +94,7 @@
     left: 57%;
     bottom: 0%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 110%;
+    font-size: 0.9rem;
      z-index: 1;
      width: 45%;
 }
