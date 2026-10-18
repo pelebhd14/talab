@@ -21,20 +21,20 @@
 .logos {
   display: flex;
   flex-direction: row;
-  gap: 237%;
+  gap: 93%;
   align-items: center;
   position: absolute;
-  left: 19%;
+  left: 37%;
   top: 4%;
   transform: translateX(-50%);
 }
 
 .Bahalaz{
-    width: 2.5vw;
+    width: 22.5%;
 }
     
 .Pele {
-    width: 3vw;
+    width: 27.5%;
 }
 
 .Mountain {
@@ -51,7 +51,7 @@
     left: 50%;
     top: 37%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 3.2vw;
+    font-size: 373.2%;
     width: 100%;
     text-align: center;
 
@@ -65,7 +65,7 @@
     left: 50%;
     top: 35%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 1.2vw;
+    font-size: 170%;
     width: 100%;
     text-align: center;
 }
@@ -75,7 +75,7 @@
     right: -13%;
     bottom: -7%;
     transform: translateX(-50%) translateY(-50%);
-    width: 5vw;
+    width: 23%;
     z-index: 1;
 }
 
@@ -85,7 +85,7 @@
     left: 57%;
     bottom: 0%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 0.9vw;
+    font-size: 110%;
      z-index: 1;
      width: 45%;
 }
@@ -97,17 +97,17 @@ button {
     left: 50%;
     bottom: 43%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 1.2vw;
-    padding: 0.5vw 1vw;
+    font-size: 150%;
+    padding: 3% 3%;
     background-color: #EABA89;
     border: none;
-    border-radius: 0.5vw;
+    border-radius: 10px;
     cursor: pointer;
     z-index: 1;
 }
 
 .Sun{
-    width: 5vw;
+    width: 25%;
     position: absolute;
     top: 18%;
     left: 10%;
@@ -118,7 +118,7 @@ button {
 }
 
 .Camel{
-    width: 5vw;
+    width: 25%;
     position: absolute;
     bottom: 5%;
     left: 30%;
