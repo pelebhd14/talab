@@ -1,0 +1,31 @@
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  gap: 70%;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 50px 0;
+}
+
+.phone-screen {
+  width: 100%;
+  max-width: 400px; 
+  min-height: 100vh;
+  margin: 0 auto; 
+  background-color: #FBE6C9;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; 
+}
+
+.Mountain {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+}
