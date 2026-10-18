@@ -1,13 +1,8 @@
-
-.logos {
-  display: flex;
-  flex-direction: row;
-  gap: 70%;
-  align-items: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 50px 0;
+@font-face {
+  font-family: 'header'; 
+  src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/YiddishkeitAlefAlefAlef-Bold.woff') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
 }
 
 .phone-screen {
@@ -23,9 +18,134 @@
   overflow: hidden; 
 }
 
+.logos {
+  display: flex;
+  flex-direction: row;
+  gap: 237%;
+  align-items: center;
+  position: absolute;
+  left: 19%;
+  top: 4%;
+  transform: translateX(-50%);
+}
+
+.Bahalaz{
+    width: 2.5vw;
+}
+    
+.Pele {
+    width: 3vw;
+}
+
 .Mountain {
     position: absolute;
     bottom: 0;
     left: 0%;
     width: 100%;
+    height: 40dvh;
+}
+
+.header{
+    font-family: 'header';
+    position: absolute;
+    left: 50%;
+    top: 37%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3.2vw;
+    width: 100%;
+    text-align: center;
+
+}
+
+.pre-header{
+   font-family: 'header';
+    /* font-family: 'Rubik', sans-serif; */
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1.2vw;
+    width: 100%;
+    text-align: center;
+}
+
+.gaya{
+    position: absolute;
+    right: -13%;
+    bottom: -7%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 5vw;
+    z-index: 1;
+}
+
+.name-credit{
+    font-family: 'Rubik', sans-serif;
+    position: absolute;
+    left: 57%;
+    bottom: 0%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 0.9vw;
+     z-index: 1;
+     width: 45%;
+}
+
+button {
+    font-family: 'Rubik', sans-serif;
+    color: aliceblue;
+    position: absolute;
+    left: 50%;
+    bottom: 43%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1.2vw;
+    padding: 0.5vw 1vw;
+    background-color: #EABA89;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.Sun{
+    width: 5vw;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    animation-name: rotateSun;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.Camel{
+    width: 5vw;
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    animation-name: camelWalk;
+  animation-duration: 20s; 
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear; 
+}
+
+@keyframes camelWalk {
+  from {
+    left: 100%; 
+   
+  }
+  to {
+  
+    left: -150px; 
+  }
+}
+
+@keyframes rotateSun {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

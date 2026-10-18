@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'header'; 
+  src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/YiddishkeitAlefAlefAlef-Bold.woff') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.choice{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+     transform: translateX(-50%) translateY(-50%);
+
+}
+
+.book{
+    width: 7vw;
+    cursor: pointer;
+}
+
+.note{
+    width: 7.5vw;
+    cursor: pointer;
+}
+
+.note-text{
+    font-family: 'header';
+    position: absolute;
+    left: 23%;
+    top: 57%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1.7vw;
+    width: 20%;
+    text-align: center;
+     cursor: pointer;
+}
+
+.book-text{
+    font-family: 'header';
+    position: absolute;
+    left: 95%;
+    top: 47%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2vw;
+    width: 100%;
+    text-align: center;
+     cursor: pointer;
+}
