@@ -1,7 +1,25 @@
+import React, { useState } from 'react'; 
+
 export default function TestPage() {
-    return (
-        <div className="test">
-            <h1>Test</h1>
-        </div>
-    );
+
+  const [userName, setUserName] = useState('');
+
+  const handleChange = (event) => {
+    setUserName(event.target.value);
+  };
+  
+  return (
+    <div className="phone-screen">
+        
+      <input
+        type="text"
+        value={userName}
+        onChange={handleChange}
+        placeholder="הקלד שם..."
+      />
+
+      <button>שלח מידע</button>
+
+    </div>
+  );
 }

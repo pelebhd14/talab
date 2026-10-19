@@ -5,6 +5,28 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #FBE6C9;
+  overflow-x: hidden;
+}
+
+.phone-screen {
+  width: 100%;
+  /* max-width: 400px;  */
+  min-height: 100vh;
+  /* margin: 0 auto;  */
+  background-color: #FBE6C9;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; 
+}
+
 .choice{
     display: flex;
     flex-direction: row;
@@ -18,12 +40,12 @@
 }
 
 .book{
-    width: 7vw;
+    width: 150%;
     cursor: pointer;
 }
 
 .note{
-    width: 7.5vw;
+    width: 150%;
     cursor: pointer;
 }
 
@@ -33,7 +55,7 @@
     left: 23%;
     top: 57%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 1.7vw;
+    font-size:550%;
     width: 20%;
     text-align: center;
      cursor: pointer;
@@ -45,7 +67,7 @@
     left: 95%;
     top: 47%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 2vw;
+    font-size: 550%;
     width: 100%;
     text-align: center;
      cursor: pointer;
