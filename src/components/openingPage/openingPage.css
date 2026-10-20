@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'ploni-reg'; 
+  src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/ploni-regular-aaa.otf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -63,7 +70,6 @@ body {
     font-size: 3.5rem;
     width: 100%;
     text-align: center;
-
 }
 
 .pre-header{
@@ -89,10 +95,10 @@ body {
 }
 
 .name-credit{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'ploni-reg';
     position: absolute;
-    left: 65%;
-    bottom: -0.5%;
+    left: 67%;
+    bottom: -1.5%;
     transform: translateX(-50%) translateY(-50%);
     font-size: 0.9rem;
      z-index: 1;
@@ -101,6 +107,7 @@ body {
 
 button {
     font-family: 'Rubik', sans-serif;
+    /* font-family: 'ploni', sans-serif; */
     color: aliceblue;
     position: absolute;
     left: 50%;
@@ -108,7 +115,7 @@ button {
     transform: translateX(-50%) translateY(-50%);
     font-size: 150%;
     padding: 3% 3%;
-    background-color: #EABA89;
+    background-color: #9e4f00;
     border: none;
     border-radius: 10px;
     cursor: pointer;

@@ -29,7 +29,7 @@ body {
   padding: 24px;
   font-family: system-ui, -apple-system, sans-serif;
   text-align: right;
-  position: relative;         
+  position: relative;       
 }
 
 .quiz-header {
@@ -62,8 +62,7 @@ body {
   padding: 14px 16px;
   border-radius: 12px;
   border: 1px solid #e0e0e0;
-  /* background-color: #ffffff; */
-  background-color: none;
+  background-color: #d39b4c8c;
   font-size: 1rem;
   text-align: right;
   cursor: pointer;
