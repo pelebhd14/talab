@@ -14,6 +14,7 @@ export default function OpeningPage() {
         navigate('/choice');
     };
 
+
     return(
         <div className='phone-screen'>
         <div className='logos'>
