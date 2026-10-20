@@ -23,7 +23,7 @@ export default function OpeningPage() {
         </div>
 
         <img className='Sun' src={Sun} alt="Sun" />
-        <img className='Camel' src={Camel} alt="Camel" />
+        {/* <img className='Camel' src={Camel} alt="Camel" /> */}
 
         <div>
             <span className='pre-header'>ברוכים הבאים ללומדת</span>
@@ -32,7 +32,7 @@ export default function OpeningPage() {
         </div>
 
         <div className='credits'>
-            <img className='gaya' src={Gaya} alt="Gaya" />
+            <img className='gaya-header' src={Gaya} alt="Gaya" />
             <span className='name-credit'>פותח ע"י רב"ט גאיה בן נון</span>
         </div>
 

@@ -1,22 +1,48 @@
+@font-face {
+  font-family: 'header'; 
+  src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/YiddishkeitAlefAlefAlef-Bold.woff') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ploni'; 
+  src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/ploni-bold-aaa.otf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #FBE6C9;
+  overflow-x: hidden;
+}
+
+
 .quiz-container {
+  display: block;               
   max-width: 400px;
   margin: 40px auto;
   padding: 24px;
-  border-radius: 16px;
-  background-color: #ffffff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   font-family: system-ui, -apple-system, sans-serif;
   text-align: right;
+  position: relative;         
 }
 
 .quiz-header {
+  font-family: 'ploni';
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 12px;
+  
 }
 
 .question-title {
-  font-size: 1.25rem;
+    font-family: 'ploni';
+  font-size: 1.8rem;
   color: #2c3e50;
   margin-bottom: 20px;
 }
@@ -24,10 +50,11 @@
 .answers-list {
   display: flex;
   flex-direction: column;
-  gap: 12px; /* רווח בין כפתור לכפתור */
+  gap: 12px; 
   width: 100%;
-  margin: 20px 0;
-  position: relative; /* לוודא שאין position absolute בשום מקום */
+  /* margin: 20px 0; */
+  position: relative; 
+  margin-top: 15%;
 }
 
 .answer-btn {
@@ -35,7 +62,8 @@
   padding: 14px 16px;
   border-radius: 12px;
   border: 1px solid #e0e0e0;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: none;
   font-size: 1rem;
   text-align: right;
   cursor: pointer;
@@ -45,20 +73,17 @@
   color: #0f172a;
 }
 
-
-.answer-btn:hover:not(:disabled) {
+/* .answer-btn:hover:not(:disabled) {
   border-color: #cbd5e1;
   background-color: #f1f5f9;
-}
+} */
 
-/* תשובה שנבחרה לפני בדיקה */
 .answer-btn.selected {
   border-color: #936206;
   background-color: none;
   font-weight: 600;
 }
 
-/* חיווי ירוק לתשובה נכונה */
 .answer-btn.correct {
   border-color: #22c55e !important;
   background-color: #dcfce7 !important;
@@ -66,7 +91,6 @@
   font-weight: bold;
 }
 
-/* חיווי אדום לתשובה שגויה שנבחרה */
 .answer-btn.incorrect {
   border-color: #ef4444 !important;
   background-color: #fee2e2 !important;
@@ -74,13 +98,13 @@
 }
 
 .quiz-footer {
-  margin-top: 24px;
-  display: flex;
-  justify-content: center;
+  text-align: center;            
+  margin-top: 400px;                
+  width: 100%;
 }
 
 .check-btn {
-  width: 40%;
+  width: 30%;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -90,6 +114,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s ease;
+  margin-top: 50%;
 }
 
 .check-btn:disabled {
@@ -102,22 +127,61 @@
   color: #475569;
 }
 
-.finish-card {
+/* .finish-card {
   text-align: center;
+} */
+
+.finish-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  min-height: 650px;       
+  padding: 24px;
 }
 
 .final-grade {
-  font-size: 2rem;
+  font-family: 'ploni';
+  font-size: 2.3rem;
   font-weight: bold;
-  color: #3b82f6;
+  color: #6d4906;
   margin: 20px 0;
+    margin-top: 40px;
 }
 
 .restart-btn {
   padding: 10px 20px;
+  margin-top: 90px;
+  margin-top: auto;
   border: none;
   border-radius: 8px;
   background-color: #0f172a;
   color: white;
   cursor: pointer;
+}
+
+.score-text{
+   font-family: 'ploni';
+}
+
+.logos-test {
+  display: flex;
+  flex-direction: row;
+  gap: 70%;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: -2%;
+}
+
+.logoB-test{
+  width: 10%;
+}
+
+.logoP-test{
+  width: 14%;
+}
+
+.finish-note{
+  font-family: 'header';
+  font-size: 3rem;
 }
