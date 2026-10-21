@@ -169,7 +169,6 @@ export default function Quiz() {
       const shuffled = [...QUESTIONS].sort(() => Math.random() - 0.5);
       const selected = shuffled.slice(0, 10);
       setQuizQuestions(selected);
-      console.log("Quiz questions successfully set:", selected); // נוודא שזה מדפיס את ה-10 שאלות שנבחרו
     }
   }, []);
 
@@ -181,31 +180,44 @@ export default function Quiz() {
     if (hasSubmitted) return;
     setHasSubmitted(true);
 
-    const finalGrade = Math.round((finalScoreValue / quizQuestions.length) * 100);
+    // const finalGrade = Math.round((finalScoreValue / quizQuestions.length) * 100);
+    const finalGrade = finalScoreValue;
+
+    const quizData = {
+      user_name: userData.user_name || 'אורח',
+      user_num: userData.user_num || '',
+      user_gdud: userData.user_gdud || '',
+      user_position: userData.user_position || '',
+      score: finalGrade,
+      createdAt: new Date()
+    };
+
 
     try {
-      await addDoc(collection(db, "exam_results"), {
-        ...userData,
-        score: finalGrade,
-        createdAt: new Date()
+
+      // const docRef = await addDoc(collection(db, "exam_results"), quizData);
+      // console.log("נשמר בנתיב המלא:", docRef.path);
+
+      // await emailjs.send(
+      //   'service_gmeacbq',
+      //   'template_o1pal4y',
+      //   quizData,
+      //   '_7VgbENFlcd2Zm71a'
+      // );
+  const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyYCmIEzLz46rr1xaG8wZEMRBUeFgSOrUFMDmalLSk2O06HkLjAdk6oPpNsT1kyot4S5Q/exec';
+      
+      fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(quizData),
       });
 
-      const templateParams = {
-        user_name: userData.user_name,
-        user_num: userData.user_num,
-        user_gdud: userData.user_gdud,
-        user_position: userData.user_position,
-        score: finalGrade,
-      };
-
-      await emailjs.send(
-        'service_gmeacbq',
-        'template_o1pal4y',
-        templateParams,
-        '_7VgbENFlcd2Zm71a'
-      );
 
     } catch (error) {
+      console.error("שגיאה קריטית בשמירה או בשליחה:", error);
     }
   };
 
@@ -245,7 +257,7 @@ export default function Quiz() {
 
     let updatedScore = score;
     if (selectedAnswer === currentQuestion.correctIndex) {
-      updatedScore = score + 1;
+      updatedScore = score + 10;
       setScore(updatedScore);
     }
 
@@ -264,13 +276,13 @@ export default function Quiz() {
   };
 
   if (isFinished) {
-    const finalGrade = Math.round((score / quizQuestions.length) * 100);
+    const finalGrade = score;
     return (
       <div className="quiz-container finish-card">
         <h2 className='finish-note'>סיימת את המבחן</h2>
-        <p className="score-text">
-          ענית נכון על <strong>{score}</strong> מתוך <strong>{QUESTIONS.length}</strong> שאלות
-        </p>
+        {/* <p className="score-text">
+          ענית נכון על <strong>{score}</strong>10 מתוך <strong></strong> שאלות
+        </p> */}
         <div className="final-grade">ציון סופי: {finalGrade}</div>
         <button className="restart-btn" onClick={handleStart}>
           חזרה ללומדה

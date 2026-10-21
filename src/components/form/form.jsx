@@ -102,7 +102,7 @@ export default function FormPage() {
           name="user_gdud"
           value={formData.user_gdud}
           onChange={handleChange}
-          placeholder="גדוד"
+          placeholder="ענף"
         />
 
         <input
@@ -110,7 +110,7 @@ export default function FormPage() {
           name="user_position"
           value={formData.user_position}
           onChange={handleChange}
-          placeholder="תפקיד"
+          placeholder="מדור/פלוגה"
         />
         <button onClick={handleSubmit}
           disabled={loading} className='form-btn'>אני מוכן</button>
