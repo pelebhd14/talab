@@ -22,14 +22,61 @@ body {
 }
 
 
-.quiz-container {
-  display: block;               
+/* .quiz-container {
+  display: block;    
   max-width: 400px;
   margin: 40px auto;
   padding: 24px;
-  font-family: system-ui, -apple-system, sans-serif;
   text-align: right;
-  position: relative;       
+  position: relative;
+  height: 100vh;
+  max-height: 70vh;
+} */
+
+.quiz-container {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  position: relative;
+  overflow: hidden; 
+}
+
+.answers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-top: 140px;
+  margin-bottom: 20px;
+}
+
+.quiz-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.check-btn {
+  position: relative;
+  top: -270%;
+  right: -17%;
+  width: 30%;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #936206;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
 .quiz-header {
@@ -42,20 +89,20 @@ body {
 
 .question-title {
     font-family: 'ploni';
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #2c3e50;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  margin-top: 30%;
 }
 
-.answers-list {
+/* .answers-list {
   display: flex;
   flex-direction: column;
   gap: 12px; 
   width: 100%;
-  /* margin: 20px 0; */
   position: relative; 
   margin-top: 15%;
-}
+} */
 
 .answer-btn {
   width: 100%;
@@ -70,6 +117,7 @@ body {
   transition: all 0.2s ease;
   position: relative;
   color: #0f172a;
+  gap: 12px;
 }
 
 /* .answer-btn:hover:not(:disabled) {
@@ -96,7 +144,7 @@ body {
   color: #b91c1c;
 }
 
-.quiz-footer {
+/* .quiz-footer {
   text-align: center;            
   margin-top: 400px;                
   width: 100%;
@@ -113,8 +161,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s ease;
-  margin-top: 50%;
-}
+} */
 
 .check-btn:disabled {
   background-color: #94a3b8;
@@ -122,6 +169,7 @@ body {
 }
 
 .timer-info {
+  font-family: 'ploni';
   font-size: 0.95rem;
   color: #475569;
 }
@@ -165,19 +213,19 @@ body {
 .logos-test {
   display: flex;
   flex-direction: row;
-  gap: 70%;
+  gap: 60%;
   align-items: center;
   position: absolute;
   right: 4%;
-  top: -2%;
+  top: 3%;
 }
 
 .logoB-test{
-  width: 10%;
+  width: 15%;
 }
 
 .logoP-test{
-  width: 14%;
+  width: 19%;
 }
 
 .finish-note{

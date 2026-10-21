@@ -113,7 +113,7 @@ export default function FormPage() {
           placeholder="תפקיד"
         />
         <button onClick={handleSubmit}
-          disabled={loading} className='form-btn'>שלח מידע</button>
+          disabled={loading} className='form-btn'>אני מוכן</button>
 
           <img className='Mountain-form' src={Mountain} alt="Mountain" />
       </div>
