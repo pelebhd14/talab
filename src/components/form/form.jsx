@@ -92,7 +92,7 @@ export default function FormPage() {
         <input
           type="text"
           name="user_num"
-          value={formData.user_num}
+          value={formData.user_num}  
           onChange={handleChange}
           placeholder="מספר אישי"
         />

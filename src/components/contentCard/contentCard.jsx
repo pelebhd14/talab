@@ -1,18 +1,22 @@
 import ArrowR from '../../assets/arrowR.png'
 import ArrowL from '../../assets/arrowL.png'
-export default function contentCard ({mainTitle, subtitle, content, currentIndex, totalPages, onNext, onPrev}) {
+import './contentCard.css';
+export default function contentCard ({mainTitle, subtitle, content, hasPrev, hasNext, onNext, onPrev}) {
     return (
+        <>
+        {/* <h2 className='main-title'>{mainTitle}</h2> */}
         <div className="content-card">
             <h1 className="sub-title">{subtitle}</h1>
             <p className="content">{content}</p>
             <div className="arrows">
-                {currentIndex > 0 && (
-                    <img src={ArrowL} alt="arrow" onClick={onPrev}/>
+                {hasPrev && (
+                    <img src={ArrowL} alt="arrowL" onClick={onPrev}/>
                 )}
-                {currentIndex < totalPages - 1 && (
-                    <img src={ArrowR} alt="arrow" onClick={onNext} />
+                {hasNext && (
+                    <img src={ArrowR} alt="arrowR" onClick={onNext} />
                 )}
             </div>
         </div>
+        </>
     )
 }

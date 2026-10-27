@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'header';
+    src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/YiddishkeitAlefAlefAlef-Bold.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ploni-reg';
+    src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/ploni-regular-aaa.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ploni';
+    src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/ploni-bold-aaa.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.content-card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    background-color: #FFF1E4;
+    width: 70vw;
+    height: 110vw;
+    border-radius: 10px;
+    border: #936206, 1.5px, solid;
+}
+
+.arrows {
+    display: flex;
+    gap: 180px;
+    width: 20%;
+    rotate: 180deg;
+    position: relative;
+    left: 74%;
+    top: 55%;
+}
+
+.arrowL {
+    position: relative;
+    right: 50%;
+}
+
+.main-title {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'header';
+    font-size: 2.5rem;
+}
+
+.sub-title {
+    position: relative;
+    left: 25%;
+    font-family: 'ploni';
+    font-size: 1.7rem;
+}
+
+.content {
+    position: relative;
+    font-family: 'ploni-reg';
+    width: 67vw;
+    right: 7%;
+    font-size: 1.2rem;
+    direction: rtl;
+
+}
