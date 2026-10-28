@@ -1,0 +1,17 @@
+.learning {
+  position: relative; /* חייב להיות relative כדי שההר יתייחס אליו */
+  min-height: 100vh; /* לפחות בגובה המסך המלא */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* שאר העיצוב שלך... */
+}
+
+/* תמונת ההר */
+.learning .Mountain {
+  width: 100%; /* תופס את כל רוחב המסך או לפי איך שעיצבת */
+  height: auto;
+  display: block;
+  margin-top: auto; /* דוחף את ההר באופן אוטומטי תמיד לסוף העמוד! */
+  z-index: -1; /* שיישאר ברקע מאחורי הטקסטים אם צריך */
+}

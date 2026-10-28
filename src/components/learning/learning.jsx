@@ -4,6 +4,7 @@ import Mountain from '../../assets/background.png'
 import React, { useState, useEffect } from 'react';
 import { topicsData } from '../../learningData.js';
 import ContentCard from '../contentCard/contentCard.jsx'
+import './learning.css';
 
 export default function Learning() {
 
@@ -19,10 +20,10 @@ export default function Learning() {
   };
 
   const handleNextPage = () => {
+
     if (currentIndex < currentTopic.pages.length - 1) {
       setCurrentIndex(prev => prev + 1);
-    } else if (
-      currentIndex < topicsData.length - 1) {
+    } else if (currentTopicIndex < topicsData.length - 1) {
       const nextTopic = topicsData[currentTopicIndex + 1];
       setCurrentTopicId(nextTopic.id);
       setCurrentIndex(0);
@@ -54,6 +55,10 @@ export default function Learning() {
         mainTitle={currentTopic.title}
         subtitle={currentPageData.subtitle}
         content={currentPageData.content}
+        items={currentPageData.items}
+        rows={currentPageData.rows}
+        headers={currentPageData.headers}
+        contentAfter={currentPageData.contentAfter}
         hasPrev={hasPrev}
         hasNext={hasNext}
         onNext={handleNextPage}

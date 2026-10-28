@@ -19,7 +19,7 @@
     font-style: normal;
 }
 
-.content-card {
+/* .content-card {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -29,22 +29,21 @@
     height: 110vw;
     border-radius: 10px;
     border: #936206, 1.5px, solid;
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between
 }
 
 .arrows {
-    display: flex;
-    gap: 180px;
+    gap: 120px;
     width: 20%;
     rotate: 180deg;
-    position: relative;
-    left: 74%;
-    top: 55%;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.arrowL {
-    position: relative;
-    right: 50%;
-}
 
 .main-title {
     position: absolute;
@@ -56,18 +55,118 @@
 }
 
 .sub-title {
-    position: relative;
-    left: 25%;
+    position: absolute;
+    left: 15%;
     font-family: 'ploni';
     font-size: 1.7rem;
+    width: 50vw;
+    text-align: center;
 }
 
 .content {
-    position: relative;
+
     font-family: 'ploni-reg';
     width: 67vw;
-    right: 7%;
+
     font-size: 1.2rem;
     direction: rtl;
+    text-align: center;
+    display: flex;
+  flex-direction: column;
+  gap: 15px;
 
+}
+
+.content-list{
+    position: relative;
+    top: 55%;
+} */
+
+
+.content-card {
+    margin-top: 150px;
+    margin-left: 40px;
+    margin-bottom: 100px;
+  position: relative;
+  top: 50%;
+  width: 80%;
+  max-width: 670px;
+  min-height: 110px; 
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+   background-color: #FFF1E4;
+  padding: 35px;
+  border-radius: 10px;
+  border: #936206, 1.5px, solid;
+  box-sizing: border-box;
+}
+
+
+.content-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  direction: rtl;
+}
+
+
+.content-card .sub-title {
+    font-family: 'ploni';
+    font-size: 1.7rem;
+    text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+.content-card .content {
+    font-family: 'ploni-reg';
+    font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+.content-card .content-list {
+  margin: 0;
+  padding-right: 20px; 
+  font-family: 'ploni-reg';
+  font-size: 1.2rem;
+
+}
+
+.content-card .content-list li {
+  margin-bottom: 5px; 
+  list-style-type: decimal;
+}
+
+
+.content-card .content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: 'ploni-reg';
+}
+
+.content-card .content-table th, 
+.content-card .content-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: right;
+}
+
+
+.content-card .arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.content-card .arrows img {
+  cursor: pointer;
+  width: 30px;
+  height: auto;
 }
