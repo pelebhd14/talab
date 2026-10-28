@@ -59,6 +59,7 @@ export default function Learning() {
         rows={currentPageData.rows}
         headers={currentPageData.headers}
         contentAfter={currentPageData.contentAfter}
+        number={currentPageData.number}
         hasPrev={hasPrev}
         hasNext={hasNext}
         onNext={handleNextPage}

@@ -87,28 +87,28 @@
     margin-top: 150px;
     margin-left: 40px;
     margin-bottom: 100px;
-  position: relative;
-  top: 50%;
-  width: 80%;
-  max-width: 670px;
-  min-height: 110px; 
-  /* margin: 0 auto; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-   background-color: #FFF1E4;
-  padding: 35px;
-  border-radius: 10px;
-  border: #936206, 1.5px, solid;
-  box-sizing: border-box;
+    position: relative;
+    top: 50%;
+    width: 80%;
+    max-width: 670px;
+    min-height: 110px;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFF1E4;
+    padding: 35px;
+    border-radius: 10px;
+    border: #936206, 1.5px, solid;
+    box-sizing: border-box;
 }
 
 
 .content-card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; 
-  direction: rtl;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    direction: rtl;
 }
 
 
@@ -116,57 +116,71 @@
     font-family: 'ploni';
     font-size: 1.7rem;
     text-align: center;
-  margin: 0 0 10px 0;
-  font-size: 22px;
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+.content-card .number {
+    font-family: 'ploni';
+    font-size: 1.5rem;
+    text-align: center;
+    /* margin: -55px 175px 10px 0; */
+    position: absolute;
+    top: -5vw;
+    right: 0;
+    font-size: 22px;
+    background-color: #FFCC00;
+    width: 15%;
+    border-radius: 10px;
 }
 
 .content-card .content {
     font-family: 'ploni-reg';
     font-size: 1.2rem;
-  margin: 0;
-  line-height: 1.5;
+    margin: 0;
+    line-height: 1.5;
 }
 
 
 .content-card .content-list {
-  margin: 0;
-  padding-right: 20px; 
-  font-family: 'ploni-reg';
-  font-size: 1.2rem;
+    margin: 0;
+    padding-right: 20px;
+    font-family: 'ploni-reg';
+    font-size: 1.2rem;
 
 }
 
 .content-card .content-list li {
-  margin-bottom: 5px; 
-  list-style-type: decimal;
+    margin-bottom: 5px;
+    list-style-type: decimal;
 }
 
 
 .content-card .content-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-family: 'ploni-reg';
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'ploni-reg';
 }
 
-.content-card .content-table th, 
+.content-card .content-table th,
 .content-card .content-table td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: right;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: right;
 }
 
 
 .content-card .arrows {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .content-card .arrows img {
-  cursor: pointer;
-  width: 30px;
-  height: auto;
+    cursor: pointer;
+    width: 30px;
+    height: auto;
 }
