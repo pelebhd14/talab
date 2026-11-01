@@ -19,72 +19,8 @@
     font-style: normal;
 }
 
-/* .content-card {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 20%;
-    background-color: #FFF1E4;
-    width: 70vw;
-    height: 110vw;
-    border-radius: 10px;
-    border: #936206, 1.5px, solid;
-    display: flex;
-    flex-direction: column;
-  justify-content: space-between
-}
-
-.arrows {
-    gap: 120px;
-    width: 20%;
-    rotate: 180deg;
-    display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
-
-
-.main-title {
-    position: absolute;
-    top: 7%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'header';
-    font-size: 2.5rem;
-}
-
-.sub-title {
-    position: absolute;
-    left: 15%;
-    font-family: 'ploni';
-    font-size: 1.7rem;
-    width: 50vw;
-    text-align: center;
-}
-
-.content {
-
-    font-family: 'ploni-reg';
-    width: 67vw;
-
-    font-size: 1.2rem;
-    direction: rtl;
-    text-align: center;
-    display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-}
-
-.content-list{
-    position: relative;
-    top: 55%;
-} */
-
-
 .content-card {
-    margin-top: 150px;
+    margin-top: 220px;
     margin-left: 40px;
     margin-bottom: 100px;
     position: relative;
@@ -103,14 +39,12 @@
     box-sizing: border-box;
 }
 
-
 .content-card-body {
     display: flex;
     flex-direction: column;
     gap: 15px;
     direction: rtl;
 }
-
 
 .content-card .sub-title {
     font-family: 'ploni';
@@ -141,7 +75,6 @@
     line-height: 1.5;
 }
 
-
 .content-card .content-list {
     margin: 0;
     padding-right: 20px;
@@ -154,7 +87,6 @@
     margin-bottom: 5px;
     list-style-type: decimal;
 }
-
 
 .content-card .content-table {
     width: 100%;
@@ -170,7 +102,6 @@
     padding: 8px;
     text-align: right;
 }
-
 
 .content-card .arrows {
     display: flex;

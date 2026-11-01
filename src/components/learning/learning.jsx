@@ -4,6 +4,7 @@ import Mountain from '../../assets/background.png'
 import React, { useState, useEffect } from 'react';
 import { topicsData } from '../../learningData.js';
 import ContentCard from '../contentCard/contentCard.jsx'
+import NotesBar from '../notesBar/notesBar.jsx'
 import './learning.css';
 
 export default function Learning() {
@@ -14,8 +15,8 @@ export default function Learning() {
   const currentTopic = topicsData[currentTopicIndex];
   const currentPageData = currentTopic.pages[currentIndex];
 
-  const handleSelectTopic = (topicId) => {
-    setCurrentTopicId(topicId);
+  const handleSelectTopic = (topicIndex) => {
+    setCurrentTopicId(topicsData[topicIndex].id);
     setCurrentIndex(0);
   };
 
@@ -45,9 +46,9 @@ export default function Learning() {
 
   return (
     <div className="learning">
-      <div className='logos'>
-        <img className='logoB-test' src={Bahalaz} alt="Bahalaz" />
-        <img className='logoP-test' src={Pele} alt="Pele" />
+      <div className='logos-learning'>
+        <img className='logoB-learning' src={Bahalaz} alt="Bahalaz" />
+        <img className='logoP-learning' src={Pele} alt="Pele" />
       </div>
       <img className='Mountain' src={Mountain} alt="Mountain" />
 
@@ -65,6 +66,12 @@ export default function Learning() {
         onNext={handleNextPage}
         onPrev={handlePrevPage}
       />
+
+      <NotesBar 
+    topicsData={topicsData} 
+    currentTopicIndex={currentTopicIndex} 
+    onSelectTopic={handleSelectTopic} 
+/>
     </div>
   );
 }

@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'header';
+    src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/YiddishkeitAlefAlefAlef-Bold.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* .noteL{
+    width: 15vw;
+} */
+
+.notes-bar .noteL {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 15vw;
+object-fit: contain;
+}
+
+.notes-bar{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-wrap: nowrap;
+}
+
+/* .note-text{
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+    font-family: 'header';
+    width: 15vw;
+    position: absolute;
+    top: 0%;
+} */
+
+.notes-bar .note-text {
+  position: relative;
+  left: -65%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+}
+.notes-bar .note-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: -100px;
+  height: 70px;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.notes-bar .note-item.active {
+  opacity: 0.6; 
+  transform: scale(1.05); 
+}
+
+.notes-bar .note-content-wrapper {
+  position: relative; 
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 65px;
+  /* height: 70px; */
+}
