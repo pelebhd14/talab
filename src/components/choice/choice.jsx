@@ -40,7 +40,7 @@ export default function ChoicePage() {
                 </div>
                 <div onClick={handleLearning}>
                     <img className='book' src={Book} alt="Book" />
-                    <span className='note-text'>לחומר הלימוד</span>
+                    <span className='note-textC'>לחומר הלימוד</span>
                 </div>
 
             </div>

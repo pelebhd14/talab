@@ -21,18 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-
-/* .quiz-container {
-  display: block;    
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 24px;
-  text-align: right;
-  position: relative;
-  height: 100vh;
-  max-height: 70vh;
-} */
-
 .quiz-container {
   width: 100%;
   max-width: 400px;
@@ -46,15 +34,6 @@ body {
   position: relative;
   overflow: hidden; 
 }
-
-/* .answers-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  margin-top: 160px;
-  margin-bottom: 0px;
-} */
 
 .answers-list {
   display: flex;
@@ -104,31 +83,6 @@ body {
   margin-top: 30%;
 }
 
-/* .answers-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px; 
-  width: 100%;
-  position: relative; 
-  margin-top: 15%;
-} */
-
-/* .answer-btn {
-  width: 100%;
-  padding: 14px 16px;
-  border-radius: 12px;
-  border: 1px solid #e0e0e0;
-  background-color: #d39b4c8c;
-  font-size: 1rem;
-  text-align: right;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
-  position: relative;
-  color: #0f172a;
-  box-sizing: border-box;
-} */
-
 .answer-btn {
   width: 100%;
   padding: 14px 16px;
@@ -149,11 +103,6 @@ body {
   height: 60px; 
 }
 
-/* .answer-btn:hover:not(:disabled) {
-  border-color: #cbd5e1;
-  background-color: #f1f5f9;
-} */
-
 .answer-btn.selected {
   border-color: #936206;
   background-color: none;
@@ -173,25 +122,6 @@ body {
   color: #680404;
 }
 
-/* .quiz-footer {
-  text-align: center;            
-  margin-top: 400px;                
-  width: 100%;
-}
-
-.check-btn {
-  width: 30%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: #936206;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s ease;
-} */
-
 .check-btn:disabled {
   background-color: #94a3b8;
   cursor: not-allowed;
@@ -202,10 +132,6 @@ body {
   font-size: 0.95rem;
   color: #475569;
 }
-
-/* .finish-card {
-  text-align: center;
-} */
 
 .finish-card {
   display: flex;
@@ -221,16 +147,16 @@ body {
   font-weight: bold;
   color: #6d4906;
   margin: 20px 0;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .restart-btn {
   padding: 10px 20px;
-  margin-top: 90px;
+  margin-top: 230px;
   margin-top: auto;
   border: none;
   border-radius: 8px;
-  background-color: #0f172a;
+  background-color: #6d4906;
   color: white;
   cursor: pointer;
 }
@@ -260,4 +186,6 @@ body {
 .finish-note{
   font-family: 'header';
   font-size: 3rem;
+  position: relative;
+  margin-top: 180px;
 }

@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'ploni';
+    src: url('../../assets/fonts/YiddishkeitAlefAlefAlef-Bold/ploni-bold-aaa.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -50,25 +57,25 @@ body {
     cursor: pointer;
 }
 
-.note-text{
-    font-family: 'header';
+.note-textC{
+    font-family: 'ploni';
     position: absolute;
     left: 20%;
     top: 57%;
     transform: translateX(-50%) translateY(-50%);
-    font-size:210%;
+    font-size:1.7rem;
     width: 20%;
     text-align: center;
      cursor: pointer;
 }
 
 .book-text{
-    font-family: 'header';
+    font-family: 'ploni';
     position: absolute;
     left: 104%;
     top: 47%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 220%;
+    font-size: 1.7rem;
     width: 100%;
     text-align: center;
      cursor: pointer;

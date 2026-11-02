@@ -33,3 +33,34 @@
 .logoP-learning {
   width: 13vw;
 }
+
+.to-test {
+position: relative; /* שומר על מיקום קבוע במסך גם אם יש גלילה ארוכה */
+ margin-top: -50px; /* מרווח מהטבלה/תוכן שמעליו */
+  margin-bottom: 20px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer; /* הופך את העכבר ליד לחיצה */
+  z-index: 1000;   /* מבטיח שזה תמיד יופיע מעל הטקסטים והגלילה */
+  transition: transform 0.2s ease;
+}
+
+.bookimg{
+  width: 120px;  /* או הרוחב המדויק שמתאים לך */
+  height: auto;
+  object-fit: contain;
+}
+
+.book-textL {
+  position: absolute; /* מוציא את הטקסט מהזרימה וממקם אותו על התמונה */
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* מרכוז מוחלט בתוך הקופסה */
+  font-family: 'ploni';
+  font-size: 1.7rem;
+  text-align: center;
+  color: #000;
+}

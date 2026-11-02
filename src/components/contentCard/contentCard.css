@@ -115,3 +115,19 @@
     width: 30px;
     height: auto;
 }
+
+.process-arrow{
+  display: flex;
+    justify-content: center;
+}
+
+.no-list-style {
+list-style: none !important;
+  list-style-type: none !important;
+  counter-reset: none !important;
+}
+
+ul.content-list.no-list-style li::before,
+ol.content-list.no-list-style li::before {
+  content: none !important;
+}

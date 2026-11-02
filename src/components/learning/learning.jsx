@@ -1,7 +1,9 @@
 import Bahalaz from '../../assets/bahalaz.png'
 import Pele from '../../assets/pele.png'
 import Mountain from '../../assets/background.png'
+import Book from '../../assets/book.png'
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { topicsData } from '../../learningData.js';
 import ContentCard from '../contentCard/contentCard.jsx'
 import NotesBar from '../notesBar/notesBar.jsx'
@@ -19,6 +21,12 @@ export default function Learning() {
     setCurrentTopicId(topicsData[topicIndex].id);
     setCurrentIndex(0);
   };
+
+      const navigate = useNavigate();
+
+    const handleTest = () => {
+        navigate('/form');
+    };
 
   const handleNextPage = () => {
 
@@ -65,13 +73,20 @@ export default function Learning() {
         hasNext={hasNext}
         onNext={handleNextPage}
         onPrev={handlePrevPage}
+        processSteps={currentPageData.processSteps}
+        page={currentPageData.noBullets}
       />
 
-      <NotesBar 
-    topicsData={topicsData} 
-    currentTopicIndex={currentTopicIndex} 
-    onSelectTopic={handleSelectTopic} 
-/>
+      <NotesBar
+        topicsData={topicsData}
+        currentTopicIndex={currentTopicIndex}
+        onSelectTopic={handleSelectTopic}
+      />
+
+      <div className='to-test' onClick={handleTest}>
+        <img className='bookimg' src={Book} alt="book" />
+        <span className='book-textL'>לבחינה</span>
+      </div>
     </div>
   );
 }

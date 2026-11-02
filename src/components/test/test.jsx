@@ -156,15 +156,15 @@ export default function Quiz() {
   const [isFinished, setIsFinished] = useState(false);
   const [timerCount, setTimerCount] = useState(2);
   const [quizQuestions, setQuizQuestions] = useState([]);
-   const currentQuestion = quizQuestions[currentQuestionIndex];
+  const currentQuestion = quizQuestions[currentQuestionIndex];
   const [hasSubmitted, setHasSubmitted] = useState(false);
-  
+
   const location = useLocation();
   const navigate = useNavigate();
 
   const userData = location.state?.userData || {};
 
- useEffect(() => {
+  useEffect(() => {
     if (QUESTIONS && QUESTIONS.length > 0) {
       const shuffled = [...QUESTIONS].sort(() => Math.random() - 0.5);
       const selected = shuffled.slice(0, 10);
@@ -180,7 +180,6 @@ export default function Quiz() {
     if (hasSubmitted) return;
     setHasSubmitted(true);
 
-    // const finalGrade = Math.round((finalScoreValue / quizQuestions.length) * 100);
     const finalGrade = finalScoreValue;
 
     const quizData = {
@@ -195,17 +194,8 @@ export default function Quiz() {
 
     try {
 
-      // const docRef = await addDoc(collection(db, "exam_results"), quizData);
-      // console.log("נשמר בנתיב המלא:", docRef.path);
+      const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyYCmIEzLz46rr1xaG8wZEMRBUeFgSOrUFMDmalLSk2O06HkLjAdk6oPpNsT1kyot4S5Q/exec';
 
-      // await emailjs.send(
-      //   'service_gmeacbq',
-      //   'template_o1pal4y',
-      //   quizData,
-      //   '_7VgbENFlcd2Zm71a'
-      // );
-  const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyYCmIEzLz46rr1xaG8wZEMRBUeFgSOrUFMDmalLSk2O06HkLjAdk6oPpNsT1kyot4S5Q/exec';
-      
       fetch(GOOGLE_SHEET_URL, {
         method: 'POST',
         mode: 'no-cors',
@@ -241,7 +231,7 @@ export default function Quiz() {
     }
   }, [isChecked, isFinished]);
 
-    if (quizQuestions.length === 0) {
+  if (quizQuestions.length === 0) {
     return <div>טוען שאלות...</div>;
   }
 
@@ -280,9 +270,6 @@ export default function Quiz() {
     return (
       <div className="quiz-container finish-card">
         <h2 className='finish-note'>סיימת את המבחן</h2>
-        {/* <p className="score-text">
-          ענית נכון על <strong>{score}</strong>10 מתוך <strong></strong> שאלות
-        </p> */}
         <div className="final-grade">ציון סופי: {finalGrade}</div>
         <button className="restart-btn" onClick={handleStart}>
           חזרה ללומדה
